@@ -14,25 +14,21 @@ class Employee {
     }
 
 // Display Function
-    public void displayInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Year of Joining: " + yearOfJoining);
-        System.out.println("Salary: Rs." + salary);
-        System.out.println("Address: " + address);
-        System.out.println();
-    }
+   public void displayInfo() {
+    System.out.printf("%-10s%-15d%-10.2f%-20s%n", name, yearOfJoining, salary, address);
 }
+
 
 // Main Function
 public class EmployeeInfo {
     public static void main(String[] args) {
         // Create instances of Employee
-        Employee employee1 = new Employee("John Smith", 2010, 60000.0, "123 Main St, City1");
-        Employee employee2 = new Employee("Alice Johnson", 2015, 55000.0, "456 Elm St, City2");
-        Employee employee3 = new Employee("Bob Brown", 2018, 62000.0, "789 Oak St, City3");
+        Employee employee1 = new Employee("John", 2010, 60000.0, "123 Main St, City1");
+        Employee employee2 = new Employee("Alice", 2015, 55000.0, "456 Elm St, City2");
+        Employee employee3 = new Employee("Bob", 2018, 62000.0, "789 Oak St, City3");
 
         // Display information for each employee
-        System.out.println("Employee Information:");
+        System.out.println("name  year of joining salary address");
         employee1.displayInfo();
         employee2.displayInfo();
         employee3.displayInfo();
